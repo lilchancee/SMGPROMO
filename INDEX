@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lil Chancee | Stream Now</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .link-button {
+      display: block;
+      margin: 0.5rem auto;
+      padding: 0.75rem 1.25rem;
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      width: 80%;
+      max-width: 320px;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .link-button:hover {
+      background-color: #00ddb0;
+    }
+    .cta {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Stream Lil Chancee</h1>
+  <p>Fans of YoungBoy, Boosie, Gates, Fredo Bang—this is your next favorite artist.</p>
+
+  <a class="link-button" href="https://open.spotify.com/artist/2PYzeu33llPnN6qzRGOTEC" target="_blank">Spotify</a>
+  <a class="link-button" href="https://music.apple.com/us/artist/lil-chancee/1555405298" target="_blank">Apple Music</a>
+  <a class="link-button" href="https://soundcloud.com/lil-chancee" target="_blank">SoundCloud</a>
+  <a class="link-button" href="https://www.youtube.com/@lilchancee" target="_blank">YouTube</a>
+  <a class="link-button" href="https://www.deezer.com/en/artist/86382552" target="_blank">Deezer</a>
+  <a class="link-button" href="https://www.iheart.com/artist/lil-chancee-34075513/" target="_blank">iHeartRadio</a>
+  <a class="link-button" href="https://www.boomplay.com/artists/7813263" target="_blank">Boomplay</a>
+
+  <div class="cta" id="targetMessage"></div>
+
+  <script>
+    // Targeting logic based on genre or referrer
+    const genre = new URLSearchParams(window.location.search).get("genre");
+    const referrer = document.referrer.toLowerCase();
+    const targetMessage = document.getElementById("targetMessage");
+
+    if (genre === "drill" || referrer.includes("youngboy") || referrer.includes("fredo")) {
+      targetMessage.textContent = "💥 You like Louisiana drill? Tap into 'Ain’t No Love' by Lil Chancee.";
+    } else if (genre === "rnb" || referrer.includes("gates") || referrer.includes("boosie")) {
+      targetMessage.textContent = "💖 Vibing with R&B? 'Bottom Girl' is your next anthem.";
+    } else {
+      targetMessage.textContent = "👀 Discover the full range—drill, R&B, and everything in between.";
+    }
+  </script>
+</body>
+</html>
